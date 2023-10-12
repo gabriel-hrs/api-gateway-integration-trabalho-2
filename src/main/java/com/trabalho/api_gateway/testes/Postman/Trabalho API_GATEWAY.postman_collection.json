@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "28a126f4-1caf-4cff-9921-a221c9b5e110",
+		"name": "API Integration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30472884"
+	},
+	"item": [
+		{
+			"name": "Create new Serviço",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numero\": 50,\r\n    \"descricao\": \"OS-Teste\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/os",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"os"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Serviços",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/os",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"os"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Serviço único",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/os/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"os",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new Equipamento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numero\": 180,\r\n    \"indice\": \"Teste\", \r\n    \"descricao\": \"Teste\",\r\n    \"problema\": \"Teste\", \r\n    \"os_id\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/os/10/equipamento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"os",
+						"10",
+						"equipamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Equipamento Índice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/os/110/equipamento/Livro1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"os",
+						"110",
+						"equipamento",
+						"Livro1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Equipamento único",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/os/110/equipamento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"os",
+						"110",
+						"equipamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Equipamento Descrição",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/os/equipamento?descricao=Livro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"os",
+						"equipamento"
+					],
+					"query": [
+						{
+							"key": "descricao",
+							"value": "Livro"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
